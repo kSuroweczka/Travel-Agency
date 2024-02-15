@@ -1,0 +1,42 @@
+<div *ngIf="selectedTrips.length > 0; else noTrips">
+  <h2>Your Basket</h2>
+  <div *ngFor="let trip of selectedTrips" class="basket-item">
+    <div class="tripItem" *ngIf="trip.availableSeats < trip.maxCapacity">
+      <input type="checkbox" (click)="checkboxTrip(trip)" />
+      <span>{{ trip.name }}</span>
+      <span
+        >Total Price: {{ calculateTotalPrice(trip) }}
+        {{ whichCurrency() }}</span
+      >
+      <div class="action-buttons">
+        <button
+          *ngIf="trip.availableSeats < trip.maxCapacity"
+          (click)="reserveTrip(trip)"
+          class="button-plus"
+        >
+          +
+        </button>
+        <span>{{ trip.members }}</span>
+        <button
+          *ngIf="trip.availableSeats < trip.maxCapacity"
+          (click)="cancelTrip(trip)"
+          class="button-minus"
+        >
+          -
+        </button>
+      </div>
+    </div>
+  </div>
+  <button
+    *ngIf="selectedTrips.length > 0"
+    [class.active]="atLeastOneCheckboxSelected()"
+    (click)="buyTrips()"
+    class="buy-button"
+  >
+    Buy
+  </button>
+</div>
+<h2>SUMA: {{ calculateTotalPriceAllTrips() }} {{ whichCurrency() }}</h2>
+<ng-template #noTrips>
+  <p>There are no booked trips in your basket!!!</p>
+</ng-template>

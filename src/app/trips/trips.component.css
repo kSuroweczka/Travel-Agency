@@ -1,0 +1,94 @@
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  color: #007bff;
+  border-radius: 5px;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+.trip-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.trip-item {
+  width: 300px;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trip-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.trip-details {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.trip-item button {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.trip-item button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.trip-item button.remove-button {
+  background-color: #c51717;
+}
+
+.name-country strong {
+  font-size: 18px;
+}
+
+.reserved-seats {
+  background-color: #ff6666;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.remove-button {
+  background-color: #cc0000;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

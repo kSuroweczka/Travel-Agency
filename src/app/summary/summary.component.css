@@ -1,0 +1,24 @@
+.order-summary {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.navbar-widget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ebddd3;
+  color: #000000;
+  border-radius: 5px;
+}
+
+.navbar-widget span {
+  margin-right: 15px;
+}
+
+.navbar-widget span:last-child {
+  font-weight: bold;
+}

@@ -1,0 +1,30 @@
+<div>
+  <h3>Filters</h3>
+  <label><b>Country:</b></label>
+  <br />
+  <label *ngFor="let country of countries">
+    <input
+      type="checkbox"
+      class="form-checkbox"
+      [value]="country"
+      (click)="updateSelectedCountries(country)"
+    />
+    <span>{{ country }}</span>
+  </label>
+
+  <br />
+  <br />
+
+  <br />
+
+  <label for="startDate">Start Date:</label>
+  <input type="date" id="startDate" [(ngModel)]="startDate" />
+  <br />
+  <br />
+  <label for="endDate">End Date:</label>
+  <input type="date" id="endDate" [(ngModel)]="endDate" />
+
+  <br />
+  <br />
+  <br />
+</div>

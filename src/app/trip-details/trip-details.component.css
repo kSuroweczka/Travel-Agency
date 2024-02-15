@@ -1,0 +1,139 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.trip-details {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.name-country {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.rounded-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.embed-responsive {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.embed-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.price {
+  margin-top: 20px;
+}
+
+.rating {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+a {
+  display: block;
+  margin-top: 20px;
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.star-rating {
+  display: inline-block;
+}
+
+.star {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.star img {
+  width: 20px;
+  height: 20px;
+  transition: filter 0.3s;
+}
+
+.star:hover img,
+.filled img,
+.selected img {
+  filter: brightness(120%) invert(1);
+}
+
+.image-slider {
+  display: flex;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.image-slider div {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease;
+}
+
+.slider-navigation {
+  margin-top: 10px;
+}
+
+.image-slider div.active {
+  transform: translateX(0);
+}
+
+button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.star-rating {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.rated {
+  color: yellow;
+}
+
+.unrated {
+  color: #ccc;
+}
+
+.rating-text {
+  margin-left: 10px;
+}

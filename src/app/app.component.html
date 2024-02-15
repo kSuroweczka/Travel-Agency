@@ -1,0 +1,40 @@
+<nav class="nav">
+  <div class="nav-left">
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/offers" routerLinkActive="active">Offers</a>
+    <a routerLink="/addTrip" routerLinkActive="active">Add Trip</a>
+    <a routerLink="/basket" routerLinkActive="active">Basket</a>
+    <a routerLink="/history" routerLinkActive="active">History</a>
+  </div>
+
+  <div class="nav-center">
+    <div class="logo">THE Office</div>
+  </div>
+
+  <div class="nav-right">
+    <div class="currency-selector">
+      <label for="currency">Select Currency:</label>
+      <select
+        id="currency"
+        [(ngModel)]="selectedCurrency"
+        (change)="onCurrencyChange()"
+      >
+        <option value="PLN">PLN</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+    </div>
+    <div class="data-selector">
+      <select id="server" [(ngModel)]="isFirebase$" (change)="onServerChange()">
+        <option value="true">Firebase</option>
+        <option value="false">REST</option>
+      </select>
+    </div>
+
+    <div class="summary">
+      <app-summary></app-summary>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

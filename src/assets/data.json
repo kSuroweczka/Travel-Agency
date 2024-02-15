@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Vacation in Greece",
+    "country": "Greece",
+    "startDate": "2024-07-01",
+    "endDate": "2024-07-10",
+    "unitPrice": 2500,
+    "maxCapacity": 20,
+    "description": "Beautiful beaches, delicious food, and interesting monuments.",
+    "photoUrl": "https://images.r.pl/zdjecia/lokalizacje/29/grecja_29_84492_109394_410x410.jpg"
+  },
+  {
+    "name": "Winter Wonderland in the Alps",
+    "country": "Austria",
+    "startDate": "2024-12-15",
+    "endDate": "2024-12-25",
+    "unitPrice": 3000,
+    "maxCapacity": 10,
+    "description": "Skiing, snowy landscapes, and a magical Christmas atmosphere.",
+    "photoUrl": "https://www.national-geographic.pl/media/cache/slider_big/uploads/media/default/0014/26/szacuje-sie-ze-przy-obecnym-tempie-postepowania-zmian-klimatycznych-lodowiec-weissseespitze-zniknie-w-ciagu-dwoch-dekad-fot-getty-images.jpeg"
+  },
+  {
+    "name": "Exploration of Rome",
+    "country": "Italy",
+    "startDate": "2024-09-01",
+    "endDate": "2024-09-10",
+    "unitPrice": 1800,
+    "maxCapacity": 15,
+    "description": "Sightseeing, Italian cuisine, and unforgettable views.",
+    "photoUrl": "https://blog.eurocamp.pl/wp-content/uploads/2022/04/136423356_3739550916106892_7743220534912983530_n.jpg"
+  },
+  {
+    "name": "Hiking in the Grand Canyon",
+    "country": "USA",
+    "startDate": "2024-05-15",
+    "endDate": "2024-05-25",
+    "unitPrice": 3500,
+    "maxCapacity": 12,
+    "description": "Adventure in the heart of the American West.",
+    "photoUrl": "https://www.trade.gov.pl/wp-content/uploads/2023/04/USA.jpg"
+  },
+  {
+    "name": "Safari in Kenya",
+    "country": "Kenya",
+    "startDate": "2024-11-01",
+    "endDate": "2024-11-10",
+    "unitPrice": 2800,
+    "maxCapacity": 18,
+    "description": "Encounter with the wild nature of Africa.",
+    "photoUrl": "https://www.national-geographic.pl/media/cache/big/uploads/media/default/0014/09/kenia-jak-sie-przygotowac-do-podrozy-i-jak-zadbac-o-bezpieczenstwo-fot-getty-images.jpeg"
+  },
+  {
+    "name": "Relaxation in Bali",
+    "country": "Indonesia",
+    "startDate": "2024-03-01",
+    "endDate": "2024-03-10",
+    "unitPrice": 2200,
+    "maxCapacity": 14,
+    "description": "Beaches, tropical landscapes, and Balinese culture.",
+    "photoUrl": "https://static.deon.pl/storage/image/core_files/2020/8/24/ed4c0dd9becf0a85778ff46269ad0bde/jpg/deon/articles-thumb-xlarge-breakpoint-default/wyspa-bali-zamknieta-dla-zagranicznych-turystow-do-konca-roku.jpg"
+  },
+  {
+    "name": "Visit to Paris",
+    "country": "France",
+    "startDate": "2024-06-15",
+    "endDate": "2024-06-25",
+    "unitPrice": 2600,
+    "maxCapacity": 20,
+    "description": "Romantic strolls, cafes, and the Eiffel Tower.",
+    "photoUrl": "https://fly.pl/cdn/photo/assets/uploads/582/278/2014/06/Francja-Paryz.jpg"
+  },
+  {
+    "name": "Climbing Machu Picchu",
+    "country": "Peru",
+    "startDate": "2024-08-01",
+    "endDate": "2024-08-10",
+    "unitPrice": 3200,
+    "maxCapacity": 10,
+    "description": "Exploration of Incan ruins at high altitudes.",
+    "photoUrl": "https://media.istockphoto.com/id/479900992/pl/zdj%C4%99cie/lama-oraz-machu-picchu.jpg?s=612x612&w=0&k=20&c=XffoN8uu278xGFQUWcMnZD9ydCCHRRYS2WWCAo9CBV4="
+  },
+  {
+    "name": "Journey to Japan",
+    "country": "Japan",
+    "startDate": "2024-04-01",
+    "endDate": "2024-04-10",
+    "unitPrice": 3000,
+    "maxCapacity": 16,
+    "description": "Tradition, modernity, and delicious Japanese cuisine.",
+    "photoUrl": "https://www.national-geographic.pl/media/cache/slider_big/uploads/media/default/0014/08/japonia-co-warto-zwiedzic-i-kiedy-jest-najlepszy-czas-na-podroz-do-japonii-fot-getty-images.jpeg"
+  },
+  {
+    "name": "Exotic Mauritius",
+    "country": "Mauritius",
+    "startDate": "2024-02-01",
+    "endDate": "2024-02-10",
+    "unitPrice": 2800,
+    "maxCapacity": 12,
+    "description": "White beaches, lagoons, and the culture of Mauritius.",
+    "photoUrl": "https://ocdn.eu/pulscms-transforms/1/BbQk9kpTURBXy85ZWQzZjFjNzU0YTMxNGEwZWYzNzg0NWYwZmZhOWNhMi5qcGeTlQMALc0D6M0CMpUCzQSwAMPDkwmmODlmZDY1Bt4AAaEwAQ/widok-z-lotu-ptaka-na-wyspe-mauritius-i-slynny-szczyt-le-morne-brabant.jpeg"
+  }
+]

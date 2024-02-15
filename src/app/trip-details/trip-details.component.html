@@ -1,0 +1,89 @@
+<div *ngIf="trip">
+  <div class="trip-details">
+    <div class="name-country">
+      <strong>{{ trip.name | uppercase }}</strong
+      ><br />
+      <strong>{{ trip.country | uppercase }}</strong
+      ><br />
+    </div>
+    <img
+      class="rounded-image"
+      [src]="trip.photoUrl"
+      alt="{{ trip.name }} Image"
+    />
+    <div class="flex content-center w-full justify-center">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190028.35442531275!2d12.371187731600552!3d41.91020879228791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2zUnp5bSwgV8WCb2NoeQ!5e0!3m2!1spl!2spl!4v1705075102443!5m2!1spl!2spl"
+          width="800"
+          height="600"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="description">
+      <strong>Description:</strong>
+      <p>{{ trip.description }}</p>
+    </div>
+    <strong>Unit Price:</strong>
+    {{ calculatePriceWithCurrency(trip.unitPrice) }} {{ whichCurrency() }}<br />
+    <button (click)="reserveTrip(trip)">+</button>
+    <span>{{ trip.members }}</span>
+    <button (click)="cancelTrip(trip)">-</button>
+    <br />
+
+    <div class="star-rating">
+      <span
+        *ngFor="let star of ratings; let i = index"
+        (click)="rateTrip(star)"
+        [ngClass]="getStarClass(i)"
+      >
+        &#9733;
+      </span>
+      <span class="rating-text">{{ getRatingText() }}</span>
+    </div>
+
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div
+          *ngFor="let photo of photos; let i = index"
+          class="carousel-item"
+          [class.active]="i === activeIndex"
+        >
+          <img
+            [src]="photo"
+            class="d-block w-100"
+            alt="Trip Photo {{ i + 1 }}"
+          />
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#imageCarousel"
+        data-bs-slide="prev"
+        (click)="prevSlide()"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#imageCarousel"
+        data-bs-slide="next"
+        (click)="nextSlide()"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <app-reviews [tripId]="trip.id"></app-reviews>
+  <a routerLink="/offers">Powrót do listy wycieczek</a>
+</div>

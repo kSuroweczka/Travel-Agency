@@ -1,0 +1,90 @@
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.trip-name {
+  flex-grow: 1;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  color: #007bff;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.tripItem {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+span {
+  flex-grow: 1;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.button-plus {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.button-minus {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+button.active {
+  background-color: #28a745;
+  color: #fff;
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+}
+
+.buy-button {
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.noTrips {
+  color: #999;
+  margin-top: 20px;
+}
+
+.noTrips p {
+  font-style: italic;
+}

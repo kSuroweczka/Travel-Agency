@@ -1,0 +1,124 @@
+<!-- trip-form.component.html -->
+<form #tripForm="ngForm" (ngSubmit)="submitForm(tripForm)" class="trip-form">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      ngModel
+      required
+      minlength="3"
+      maxlength="50"
+    />
+    <div
+      *ngIf="
+        tripForm.controls['name'].hasError('required') &&
+        tripForm.controls['name'].touched
+      "
+      class="errorHeader"
+    >
+      Name is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="country">Country:</label>
+    <input
+      type="text"
+      id="country"
+      name="country"
+      ngModel
+      required
+      minlength="3"
+      maxlength="50"
+    />
+    <div
+      *ngIf="
+        tripForm.controls['country'].hasError('required') &&
+        tripForm.controls['country'].touched
+      "
+      class="errorHeader"
+    >
+      Country is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" ngModel required />
+    <div
+      *ngIf="
+        tripForm.controls['startDate'].hasError('required') &&
+        tripForm.controls['startDate'].touched
+      "
+      class="errorHeader"
+    >
+      Start Date is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" ngModel required />
+    <div
+      *ngIf="
+        tripForm.controls['endDate'].hasError('required') &&
+        tripForm.controls['endDate'].touched
+      "
+      class="errorHeader"
+    >
+      End Date is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="unitPrice">Unit Price:</label>
+    <input type="number" id="unitPrice" name="unitPrice" ngModel required />
+    <div
+      *ngIf="
+        tripForm.controls['unitPrice'].hasError('required') &&
+        tripForm.controls['unitPrice'].touched
+      "
+      class="errorHeader"
+    >
+      Unit Price is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="maxCapacity">Max Capacity:</label>
+    <input type="number" id="maxCapacity" name="maxCapacity" ngModel required />
+    <div
+      *ngIf="
+        tripForm.controls['maxCapacity'].hasError('required') &&
+        tripForm.controls['maxCapacity'].touched
+      "
+      class="errorHeader"
+    >
+      Max Capacity is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" ngModel required></textarea>
+    <div
+      *ngIf="
+        tripForm.controls['description'].hasError('required') &&
+        tripForm.controls['description'].touched
+      "
+      class="errorHeader"
+    >
+      Description is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="photoUrl">Photo URL:</label>
+    <input type="url" id="photoUrl" name="photoUrl" ngModel required />
+    <div
+      *ngIf="
+        tripForm.controls['photoUrl'].hasError('required') &&
+        tripForm.controls['photoUrl'].touched
+      "
+      class="errorHeader"
+    >
+      Photo URL is required.
+    </div>
+  </div>
+  <button type="submit">Add Trip</button>
+</form>

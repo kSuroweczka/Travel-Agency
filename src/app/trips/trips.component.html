@@ -1,0 +1,88 @@
+<!-- app.component.html -->
+
+<!-- <app-trips-filters></app-trips-filters> -->
+<!-- <app-trips-filters
+  (filterChanged)="onFilterChanged($event)"
+></app-trips-filters> -->
+
+<div class="pagination">
+  <button
+    *ngFor="let page of pageArray"
+    [class.active]="page === currentPage"
+    (click)="onPageChange(page)"
+  >
+    {{ page }}
+  </button>
+</div>
+
+<div class="trip-list">
+  <div
+    *ngFor="let trip of paginatedTrips"
+    class="trip-item"
+    [ngStyle]="{
+      'background-color': trip.availableSeats <= 3 ? '#99ffcc' : 'white',
+      'border-color':
+        trip.unitPrice === findTheCheapest()
+          ? 'green'
+          : trip.unitPrice === findTheMostExpensive()
+          ? 'red'
+          : 'black'
+    }"
+  >
+    <img
+      class="rounded-image"
+      [src]="trip.photoUrl"
+      alt="{{ trip.name }} Image"
+      (click)="navigateToTripDetails(trip.id)"
+    />
+    <div class="trip-details">
+      <div class="name-country">
+        <strong>{{ trip.name | uppercase }}</strong
+        ><br />
+        <strong>{{ trip.country | uppercase }}</strong
+        ><br />
+      </div>
+      <br />
+      <br />
+
+      <strong>Start Date:</strong> {{ trip.startDate }}<br />
+      <strong>End Date:</strong> {{ trip.endDate }}<br />
+      <strong>Unit Price:</strong>
+      {{ calculatePriceWithCurrency(trip.unitPrice) }} {{ whichCurrency()
+      }}<br />
+      <strong>Max Capacity:</strong>
+      {{ trip.maxCapacity }}<br />
+      <!-- <strong>Description:</strong> {{ trip.description }}<br /> -->
+      <strong>Available Seats:</strong> {{ trip.availableSeats }}<br />
+
+      <ng-container *ngIf="trip.rating !== undefined && trip.rating !== null">
+        <strong>Rating:</strong> {{ trip.rating }} / 5<br />
+      </ng-container>
+    </div>
+    <div
+      class="reserved-seats"
+      [ngStyle]="{
+        'background-color': trip.members <= 10 ? '#ff6666' : '#0099ff',
+        color: trip.members <= 10 ? 'black' : 'white'
+      }"
+    >
+      Reserved Seats: {{ trip.members }}
+    </div>
+    <div class="actions">
+      <button *ngIf="trip.availableSeats > 0" (click)="reserveTrip(trip)">
+        +
+      </button>
+      <button
+        *ngIf="trip.availableSeats < trip.maxCapacity"
+        (click)="cancelTrip(trip)"
+      >
+        -
+      </button>
+    </div>
+    <br />
+    <br />
+    <button (click)="removeTripByID(trip.id)" class="remove-button">
+      Delete
+    </button>
+  </div>
+</div>

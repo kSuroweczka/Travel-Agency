@@ -1,0 +1,8 @@
+.price-range-container {
+  display: flex;
+  align-items: center;
+}
+
+.price-range-container span {
+  margin: 0 10px;
+}

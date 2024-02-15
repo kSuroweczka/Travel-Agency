@@ -1,0 +1,83 @@
+<div class="content-container">
+  <ngb-carousel *ngIf="images.length > 0" [interval]="3000">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <img [src]="image" alt="Image" class="image" />
+    </ng-template>
+  </ngb-carousel>
+
+  <header>
+    <h1>Welcome to THE Office!</h1>
+  </header>
+
+  <section>
+    <h2>What We Do:</h2>
+    <ul>
+      <li>
+        <strong>Customized Travel Packages:</strong> We design personalized
+        travel packages, ensuring every detail aligns with your interests,
+        budget, and schedule.
+      </li>
+      <li>
+        <strong>Global Destinations:</strong> Explore the world with our
+        extensive list of destinations. From exotic beach retreats to cultural
+        expeditions, we have something for every traveler.
+      </li>
+      <li>
+        <strong>Luxury Travel:</strong> Indulge in luxury travel experiences
+        with our curated selection of upscale accommodations, private tours, and
+        exclusive amenities.
+      </li>
+      <li>
+        <strong>Adventure Tours:</strong> For the thrill-seekers, we offer
+        adrenaline-pumping adventure tours that promise excitement and
+        breathtaking landscapes.
+      </li>
+      <li>
+        <strong>Cruise Packages:</strong> Embark on a sea adventure with our
+        carefully crafted cruise packages, offering a perfect blend of
+        relaxation and exploration.
+      </li>
+    </ul>
+
+    <h2>Why Choose Us:</h2>
+    <ul>
+      <li>
+        <strong>Expert Guidance:</strong> Our knowledgeable travel consultants
+        are here to guide you at every step, ensuring a seamless and stress-free
+        planning process.
+      </li>
+      <li>
+        <strong>Tailored Itineraries:</strong> We understand that every traveler
+        is unique. Our custom itineraries reflect your individual preferences,
+        making each journey one-of-a-kind.
+      </li>
+      <li>
+        <strong>Customer Satisfaction:</strong> With a commitment to excellence,
+        we prioritize your satisfaction. Our goal is to exceed your expectations
+        and create lasting memories.
+      </li>
+      <li>
+        <strong>24/7 Support:</strong> Travel with confidence knowing that our
+        support team is available around the clock to assist you, should you
+        need any help during your journey.
+      </li>
+    </ul>
+  </section>
+
+  <div class="contact-map-container">
+    <app-contact class="business-card"></app-contact>
+  </div>
+</div>
+<div class="map-container">
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190028.35442531275!2d12.371187731600552!3d41.91020879228791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2zUnp5bSwgV8WCb2NoeQ!5e0!3m2!1spl!2spl!4v1705075102443!5m2!1spl!2spl"
+      width="800"
+      height="600"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>

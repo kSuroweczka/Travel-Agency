@@ -1,0 +1,15 @@
+<div
+  class="navbar-widget"
+  routerLink="/basket"
+  routerLinkActive="active"
+  [ngStyle]="{
+    'background-color': selectedTripsCount > 10 ? '#0099ff' : '#ff6666'
+  }"
+>
+  <span> Selected Trips: {{ selectedTripsCount }}</span>
+  <span>
+    Total Price:
+    {{ calculatePriceWithCurrency(selectedTripsTotalPrice) }}
+    {{ whichCurrency() }}
+  </span>
+</div>

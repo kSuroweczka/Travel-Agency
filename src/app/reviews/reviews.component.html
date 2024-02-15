@@ -1,0 +1,45 @@
+<div>
+  <h2>Reviews</h2>
+  <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nickname">Nickname:</label>
+      <input
+        type="text"
+        id="nickname"
+        formControlName="nickname"
+        [ngClass]="{ 'is-invalid': isInvalid('nickname') }"
+      />
+      <div *ngIf="isInvalid('nickname')" class="text-danger">
+        Nickname is required.
+      </div>
+    </div>
+    <div>
+      <label for="reviewText">Review:</label>
+      <textarea
+        id="reviewText"
+        formControlName="reviewText"
+        [ngClass]="{ 'is-invalid': isInvalid('reviewText') }"
+      ></textarea>
+      <div *ngIf="isInvalid('reviewText')" class="text-danger">
+        Review text should be between 50 and 500 characters.
+      </div>
+    </div>
+    <div>
+      <label for="purchaseDate">Purchase Date:</label>
+      <input type="date" id="purchaseDate" formControlName="purchaseDate" />
+    </div>
+    <div>
+      <button type="submit">Submit Review</button>
+    </div>
+  </form>
+  <div *ngIf="reviews.length > 0">
+    <h3>Added Reviews:</h3>
+    <ul>
+      <li *ngFor="let review of reviews">
+        <strong>{{ review.nickname }}</strong>
+        <p>{{ review.reviewText }}</p>
+        <p>Purchase Date: {{ review.purchaseDate | date }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

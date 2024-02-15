@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "office-database-c3e8d": {
+      "hosting": {
+        "theoffice": [
+          "office-database-c3e8d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "office-database-c3e8d"
+  }
+}

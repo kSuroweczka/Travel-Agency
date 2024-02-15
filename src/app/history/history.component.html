@@ -1,0 +1,13 @@
+<div *ngIf="trips.length > 0; else noTrips">
+  <h2>Your History</h2>
+  <div *ngFor="let trip of trips" class="basket-item">
+    <div class="tripItem" *ngIf="trip.availableSeats < trip.maxCapacity">
+      <span>{{ trip.name }}</span>
+      <span>{{ trip.members }}</span>
+    </div>
+  </div>
+</div>
+
+<ng-template #noTrips>
+  <p>There are no bought trips!!!</p>
+</ng-template>
